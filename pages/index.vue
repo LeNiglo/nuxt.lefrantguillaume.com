@@ -1,5 +1,8 @@
 <template>
-  <Header />
+  <div class="">
+    <Header />
+    <SocialBanner />
+  </div>
 </template>
 
 <script>
