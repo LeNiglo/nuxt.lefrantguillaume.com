@@ -2,6 +2,7 @@
   <div class="">
     <Header />
     <SocialBanner />
+    <DetailsAndEducation />
   </div>
 </template>
 

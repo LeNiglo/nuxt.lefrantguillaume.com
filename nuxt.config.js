@@ -47,7 +47,7 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faArrowDown', 'faCircle']
+      solid: ['faArrowDown', 'faCircle', 'faMapPin', 'faEnvelope', 'faPhoneAlt']
     }
   }
 }
