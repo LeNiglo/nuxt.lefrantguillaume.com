@@ -16,17 +16,12 @@
         </a>
       </div>
       <div class="flex flex-col justify-center space-y-4 text-right">
-        <div>
+        <div v-for="edu of educations" :key="edu.school.name">
           <h3>
-            <a href="https://epitech.eu" target="_blank" class="text-blue-500 hover:underline font-bold">EPITECH</a>
-             - Diplome d'Expert en Technologies de l'Information.
+            <a :href="edu.school.link" target="_blank" class="text-blue-500 hover:underline font-bold">{{ edu.school.name }}</a>
+             - {{ edu.diploma }}.
           </h3>
-        </div>
-        <div>
-          <h3>
-            <a href="https://www.kent.ac.uk/" target="_blank" class="text-blue-500 hover:underline font-bold">University of Kent</a>
-             - Computing and Entrepreneurship MSc.
-          </h3>
+          <p v-if="edu.description">{{ edu.description }}</p>
         </div>
       </div>
     </div>
@@ -35,7 +30,28 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      educations: [
+        {
+          school: {
+            name: 'EPITECH',
+            link: 'https://epitech.eu/',
+          },
+          diploma: 'Diplome d\'Expert en Technologies de l\'Information',
+          description: '',
+        },
+        {
+          school: {
+            name: 'Univeristy of Kent',
+            link: 'https://www.kent.ac.uk/',
+          },
+          diploma: 'Computing and Entrepreneurship MSc',
+          description: '',
+        },
+      ]
+    }
+  }
 }
 </script>
 
