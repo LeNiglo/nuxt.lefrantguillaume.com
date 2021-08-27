@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-300">
+  <section class="bg-gray-200">
     <div class="flex flex-col md:flex-row justify-evenly md:max-w-7xl mx-auto">
       <a
         v-for="social of socials"
@@ -7,9 +7,9 @@
         :href="social.link"
         target="_blank"
         :title="social.name"
-        class="px-4 py-16 transition duration-1000 filter grayscale hover:grayscale-0"
+        class="px-4 py-4 md:px-4 md:py-16 transition duration-1000 filter md:grayscale hover:grayscale-0"
       >
-        <img v-if="social.logo" :src="social.logo" :alt="social.name" />
+        <img v-if="social.logo" :src="social.logo" :alt="social.name" class="h-32 md:h-auto mx-auto" />
         <span v-else>{{ social.name }}</span>
       </a>
     </div>
