@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-200">
+  <section class="bg-gradient-to-r from-yellow-pastel to-blue-pastel">
     <div class="flex flex-col md:flex-row justify-evenly md:max-w-7xl mx-auto">
       <a
         v-for="social of socials"

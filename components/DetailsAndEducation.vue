@@ -38,7 +38,7 @@ export default {
             name: 'EPITECH',
             link: 'https://epitech.eu/',
           },
-          diploma: 'Diplome d\'Expert en Technologies de l\'Information',
+          diploma: 'Expert in Information Technologies',
           description: '',
         },
         {
