@@ -3,10 +3,10 @@
     <h1 class="text-3xl md:text-6xl">Guillaume Lefrant</h1>
     <p class="">Web Developer</p>
 
-    <div class="absolute -top-4 left-0 right-0 z-10 transform origin-top duration-100 transition-transform" :style="`transform: scale(1, ${effectScale})`">
+    <div class="absolute top-0 md:-top-16 xl:-top-48 left-0 right-0 z-10 origin-top" :style="`transform: scale(1, ${effectScale})`">
       <header-clouds></header-clouds>
     </div>
-    <div class="absolute -bottom-4 left-0 right-0 z-10 transform origin-bottom duration-100 transition-transform" :style="`transform: scale(1, ${effectScale})`">
+    <div class="absolute bottom-0 md:-bottom-16 xl:-bottom-48 left-0 right-0 z-10 origin-bottom" :style="`transform: scale(1, ${effectScale})`">
       <header-waves></header-waves>
     </div>
     <button class="absolute bottom-4 animate-pulse z-20" @click.prevent="handleScrollDownClick">
@@ -39,7 +39,7 @@ export default {
     },
     handleScrollInWindow: function () {
       if (this.debounceTimeout) return false
-      this.debounceTimeout = setTimeout(() => this.debounceTimeout = null, 50)
+      this.debounceTimeout = setTimeout(() => this.debounceTimeout = null, 5)
 
       const { scrollY, screen: { height } } = window
       this.effectScale = 1 + (scrollY / height * 5)
